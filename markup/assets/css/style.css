@@ -52,6 +52,14 @@
     font-weight: normal;
     font-style: normal;
 }
+html{
+    position: relative;
+    min-height: 100%;
+}
+body{
+    margin-bottom: 250px;
+    height: 100%;
+}
 .inline-block{
     display: inline-block;
     vertical-align: middle;
@@ -217,7 +225,7 @@
 .text-after-insurance {
     color: rgba(26,26,26,.7);
     font-size: 18px;
-    width: 650px;
+    max-width: 650px;
     margin: 0 auto;
     padding: 70px 0 20px  0;
 }
@@ -227,6 +235,53 @@
 }
 .text-after-insurance .end-text{
     font-family: Adobe-Garamond-Pro-Italic;
+}
+.testimonials{
+    color: rgba(26,26,26,.9);
+    font-family: Adobe-Garamond-Pro;
+    padding: 50px 0;
+}
+.testimonials .item{
+    margin-bottom: 35px;
+}
+.testimonials .quote {
+    font-size: 80px;
+    opacity: 0.5;
+    line-height: 1;
+}
+.testimonials .message{
+    font-size: 20px;
+    line-height: 33px;
+    margin-bottom: 20px;
+}
+.testimonials .author{
+    font-size: 18px;
+    opacity: 0.5;
+}
+.footer{
+    position: absolute;
+    width: 100%;
+    z-index: 33;
+    bottom: 0;
+}
+.footer .top-footer{
+    padding: 32px 0;
+    background-color: #333333;
+
+}
+.footer .bottom-footer{
+    padding: 64px 0;
+    background: #1f1f1f;
+    font-family: Adobe-Garamond-Pro;
+    font-size: 18px;
+}
+.footer .bottom-footer .create-by{
+    margin-top: 1.5em;
+    color: rgba(255,255,255,.4);
+}
+.footer .bottom-footer .create-by a{
+    text-decoration: underline;
+    color: rgba(255,255,255,.4);
 }
 @media (max-width: 991px) {
     .navbar-toggle{
@@ -245,7 +300,7 @@
         right: 0;
     }
     #page-content.slide-active {
-        padding-top: 0
+        padding-top: 0;
     }
     /* put toggle bars on the left :: not using button */
     #slide-nav .navbar-toggle {
@@ -256,9 +311,11 @@
         margin: 0;
         width: 30px;
         height: 40px;
-        padding: 10px 0 0 0;
+        padding: 0;
         border: 0;
         background: transparent;
+        font-size: 30px;
+        color: #fff;
     }
     /* icon bar prettyup - optional */
     #slide-nav .navbar-toggle > .icon-bar {
@@ -275,9 +332,6 @@
         width: 100%;
     }
     /* un fix the navbar when active so that all the menu items are accessible */
-    .navbar.navbar-fixed-top.slide-active {
-        position: relative
-    }
     #slide-nav .container {
         margin: 0!important;
         padding: 0!important;
@@ -298,10 +352,11 @@
         right: -100%;
         width: 260px;
         min-width: 0;
-        position: absolute;
+        position: fixed;
+        height: 100%;
         padding-left: 0;
         z-index: 2;
-        top: -8px;
+        top: 0;
         margin: 0;
     }
     #slide-nav #slidemenu .navbar-nav {
@@ -326,33 +381,6 @@
     #slide-nav.navbar-inverse #slidemenu {
         background: #333
     }
-    /* this is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls*/
-    #navbar-height-col {
-        position: fixed;
-        top: 0;
-        height: 100%;
-        bottom:0;
-        width: 260px;
-        right: -260px;
-        background: #212121;
-    }
-    #navbar-height-col.inverse {
-        background: #333;
-        z-index: 1;
-        border: 0;
-    }
-    #slide-nav .navbar-form {
-        width: 100%;
-        margin: 8px 0;
-        text-align: center;
-        overflow: hidden;
-    }
-    #slide-nav .navbar-form .form-control {
-        text-align: center
-    }
-    #slide-nav .navbar-form .btn {
-        width: 100%
-    }
 }
 @media (min-width:992px) {
     #page-content {
@@ -363,6 +391,23 @@
     }
     .navbar-header {
         right: 0!important
+    }
+}
+@media (max-width: 767px) {
+    .background-section{
+        height: auto !important;
+    }
+    .background-section .content-page{
+        padding: 50px 0;
+    }
+    .background-section .content-page .middle-block{
+        padding: 15px;
+    }
+    .background-section .middle-block .before-slogan{
+        font-size: 16px;
+    }
+    .background-section .middle-block .slogan{
+        font-size: 26px;
     }
 }
 

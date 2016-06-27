@@ -4,14 +4,10 @@
 $(document).ready(function () {
 
 
-    //stick in the fixed 100% height behind the navbar but don't wrap it
-    $('#slide-nav').after($('<div class="inverse" id="navbar-height-col"></div>'));
-
-    $('#slide-nav').after($('<div id="navbar-height-col"></div>'));
-
     // Enter your ids or classes
     var toggler = '.navbar-toggle';
     var pagewrapper = '#page-content';
+    var footerContent = '#footer-slide';
     var navigationwrapper = '.navbar-header';
     var menuwidth = '100%'; // the menu inside the slide menu itself
     var slidewidth = '260px';
@@ -39,7 +35,9 @@ $(document).ready(function () {
             right: selected ? '0px' : slidewidth
         });
 
-
+        $(footerContent).stop().animate({
+            right: selected ? '0px' : slidewidth
+        });
         $(this).toggleClass('slide-active', !selected);
         $('#slidemenu').toggleClass('slide-active');
 
