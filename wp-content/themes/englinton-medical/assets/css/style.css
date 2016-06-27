@@ -1,0 +1,414 @@
+@font-face {
+    font-family: 'Proximanova-regular';
+    src: url('../fonts/proxima-nova/regular/proximanova-regular.eot');
+    src: local('☺'), url('../fonts/proxima-nova/regular/proximanova-regular.woff') format('woff'),
+    url('../fonts/proxima-nova/regular/proximanova-regular.ttf') format('truetype'),
+    url('../fonts/proxima-nova/regular/proximanova-regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proximanova-light';
+    src: url('../fonts/proxima-nova/light/proximanova-light.eot');
+    src: local('☺'), url('../fonts/proxima-nova/light/proximanova-light.woff') format('woff'),
+    url('../fonts/proxima-nova/light/proximanova-light.ttf') format('truetype'),
+    url('../fonts/proxima-nova/light/proximanova-light.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proximanova-semibold';
+    src: url('../fonts/proxima-nova/semi-bold/proximanova-semibold.eot');
+    src: local('☺'), url('../fonts/proxima-nova/semi-bold/proximanova-semibold.woff') format('woff'),
+    url('../fonts/proxima-nova/semi-bold/proximanova-semibold.ttf') format('truetype'),
+    url('../fonts/proxima-nova/semi-bold/proximanova-semibold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proximanova-bold';
+    src: url('../fonts/proxima-nova/bold/proximanova-bold.eot');
+    src: local('☺'), url('../fonts/proxima-nova/bold/proximanova-bold.woff') format('woff'),
+    url('../fonts/proxima-nova/bold/proximanova-bold.ttf') format('truetype'),
+    url('../fonts/proxima-nova/bold/proximanova-bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Adobe-Garamond-Pro-Italic';
+    src: url('../fonts/adobe-garamond-pro/regular-italic/Adobe-Garamond-Pro-Italic.eot');
+    src: local('☺'), url('../fonts/adobe-garamond-pro/regular-italic/Adobe-Garamond-Pro-Italic.woff') format('woff'),
+    url('../fonts/adobe-garamond-pro/regular-italic/Adobe%20Garamond%20Pro%20Italic.ttf') format('truetype'),
+    url('../fonts/adobe-garamond-pro/regular-italic/Adobe%20Garamond%20Pro%20Italic.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Adobe-Garamond-Pro';
+    src: url('../fonts/adobe-garamond-pro/regular/Adobe-Garamond-Pro-Regular.eot');
+    src: local('☺'), url('../fonts/adobe-garamond-pro/regular/Adobe-Garamond-Pro-Regular.woff') format('woff'),
+    url('../fonts/adobe-garamond-pro/regular/Adobe-Garamond-Pro-Regular.ttf') format('truetype'),
+    url('../fonts/adobe-garamond-pro/regular/Adobe-Garamond-Pro-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+html{
+    position: relative;
+    min-height: 100%;
+}
+body{
+    margin-bottom: 250px;
+    height: 100%;
+}
+.inline-block{
+    display: inline-block;
+    vertical-align: middle;
+}
+.title-block{
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-family: Adobe-Garamond-Pro;
+}
+.section{
+    border-bottom: 1px solid rgba(26,26,26,.15);
+    padding-bottom: 37px;
+}
+.header{
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+.header .navbar{
+    padding: 20px 15px 0 0;
+    font-family: Proximanova-semibold;
+    margin-bottom: 0;
+    border: none;
+}
+.header .navbar .navbar-brand{
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-style: normal;
+    color: #fff;
+    padding: 0;
+    line-height: 1em;
+    margin: 0;
+}
+.header .navbar .header-menu ul>li>a{
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1em;
+    color: #fff;
+}
+.header .navbar .header-menu ul>li>a:hover{
+    background: none;
+}
+.header .navbar .header-menu ul>.contact-us>a{
+    border: 2px solid #fff;
+    border-radius: 300px;
+    background: transparent;
+    webkit-transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+    -moz-transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+    -ms-transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+    -o-transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+}
+.header .navbar .header-menu ul>.contact-us>a:hover{
+    background-color: #fff;
+    color: #181818;
+}
+.background-section .content-page{
+    height: 100%;
+    padding: 180px 0 155px;
+    background: rgba(0,0,0,0.4);
+}
+.background-section .content-page .middle-block{
+    width: 100%;
+    max-width: 956px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 32px;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+}
+.background-section .middle-block p{
+    margin: 20px 0;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    color: #fff;
+}
+.background-section .middle-block .before-slogan{
+     font-family: Adobe-Garamond-Pro-Italic;
+     font-size: 24px;
+}
+.background-section .middle-block .slogan{
+    font-family:Proximanova-bold;
+    font-size: 68px;
+}
+.background-section .middle-block  p>a{
+    border-radius: 300px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: none;
+    padding: 1em 1.75em;
+    background-color: #36b3a8;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    line-height: 1em;
+    margin: 10px 0;
+    color: #fff;
+    border: none;
+    -webkit-transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+    -moz-transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+    -ms-transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+    -o-transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+}
+.background-section .middle-block  p>a:hover{
+    background-color: rgba(54,179,168,.8);
+}
+.wrapper{
+    padding: 96px 0;
+}
+.our-specialities {
+    font-family: Proximanova-regular;
+}
+.our-specialities .title-block{
+    margin-bottom: 17px;
+}
+.our-specialities .title-block>a{
+    color: #3d9991;
+    text-decoration: none;
+    font-size: 32px;
+    font-family: Proximanova-bold;
+}
+.our-specialities .item{
+    margin-bottom: 30px;
+}
+.our-specialities .img-item img{
+    width: 100%;
+}
+.our-specialities .title-item{
+    color: rgba(26,26,26,.7);
+    margin-bottom: 15px;
+    margin-top: 27px;
+    font-size: 22px;
+}
+.our-specialities .learn-more a{
+    color: #3d9991;
+    font-size: 18px;
+    text-decoration: none;
+}
+.insurance{
+    padding: 30px 0;
+    color: #4a4a4a;
+    font-family: Proximanova-regular;
+}
+.insurance .content{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.insurance .img-block img{
+    max-width: 100%;
+}
+.text-after-insurance {
+    color: rgba(26,26,26,.7);
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 70px 0 20px  0;
+}
+.text-after-insurance p{
+    margin: 15px 0;
+    font-family: Adobe-Garamond-Pro;
+}
+.text-after-insurance .end-text{
+    font-family: Adobe-Garamond-Pro-Italic;
+}
+.testimonials{
+    color: rgba(26,26,26,.9);
+    font-family: Adobe-Garamond-Pro;
+    padding: 50px 0;
+}
+.testimonials .item{
+    margin-bottom: 35px;
+}
+.testimonials .quote {
+    font-size: 80px;
+    opacity: 0.5;
+    line-height: 1;
+}
+.testimonials .message{
+    font-size: 20px;
+    line-height: 33px;
+    margin-bottom: 20px;
+}
+.testimonials .author{
+    font-size: 18px;
+    opacity: 0.5;
+}
+.footer{
+    position: absolute;
+    width: 100%;
+    z-index: 33;
+    bottom: 0;
+}
+.footer .top-footer{
+    padding: 32px 0;
+    background-color: #333333;
+
+}
+.footer .bottom-footer{
+    padding: 64px 0;
+    background: #1f1f1f;
+    font-family: Adobe-Garamond-Pro;
+    font-size: 18px;
+}
+.footer .bottom-footer .create-by{
+    margin-top: 1.5em;
+    color: rgba(255,255,255,.4);
+}
+.footer .bottom-footer .create-by a{
+    text-decoration: underline;
+    color: rgba(255,255,255,.4);
+}
+@media (max-width: 991px) {
+    .navbar-toggle{
+        display: inherit;
+    }
+    body{
+        overflow-x: hidden
+    }
+    /*first child of #page-content so it doesn't shift around*/
+    .no-margin-top {
+        margin-top: 0!important
+    }
+    /*wrap the entire page content but not nav inside this div if not a fixed top, don't add any top padding */
+    #page-content {
+        position: relative;
+        right: 0;
+    }
+    #page-content.slide-active {
+        padding-top: 0;
+    }
+    /* put toggle bars on the left :: not using button */
+    #slide-nav .navbar-toggle {
+        cursor: pointer;
+        position: relative;
+        line-height: 0;
+        float: right;
+        margin: 0;
+        width: 30px;
+        height: 40px;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        font-size: 30px;
+        color: #fff;
+    }
+    /* icon bar prettyup - optional */
+    #slide-nav .navbar-toggle > .icon-bar {
+        width: 100%;
+        display: block;
+        height: 3px;
+        margin: 5px 0 0 0;
+    }
+    #slide-nav .navbar-toggle.slide-active .icon-bar {
+        background: orange
+    }
+    .navbar-header {
+        position: relative;
+        width: 100%;
+    }
+    /* un fix the navbar when active so that all the menu items are accessible */
+    #slide-nav .container {
+        margin: 0!important;
+        padding: 0!important;
+        height:100%;
+    }
+    #slide-nav .navbar-header {
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    #slide-nav .navbar.slide-active {
+        position: absolute;
+        width: 80%;
+        top: -1px;
+        z-index: 1000;
+    }
+    #slide-nav #slidemenu {
+        background: #212121;
+        right: -100%;
+        width: 260px;
+        min-width: 0;
+        position: fixed;
+        height: 100%;
+        padding-left: 0;
+        z-index: 2;
+        top: 0;
+        margin: 0;
+    }
+    #slide-nav #slidemenu .navbar-nav {
+        min-width: 0;
+        width: 100%;
+        margin: 0;
+        padding: 24px 36px 72px;
+    }
+    #slide-nav #slidemenu .navbar-nav>li{
+        float: none;
+    }
+    .header .navbar .header-menu ul>li>a{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .header .navbar .header-menu ul>.contact-us>a{
+        width: 140px;
+    }
+    #slide-nav {
+        border-top: 0
+    }
+    #slide-nav.navbar-inverse #slidemenu {
+        background: #333
+    }
+}
+@media (min-width:992px) {
+    #page-content {
+        right: 0!important
+    }
+    .navbar.navbar-fixed-top.slide-active {
+        position: fixed
+    }
+    .navbar-header {
+        right: 0!important
+    }
+}
+@media (max-width: 767px) {
+    .background-section{
+        height: auto !important;
+    }
+    .background-section .content-page{
+        padding: 50px 0;
+    }
+    .background-section .content-page .middle-block{
+        padding: 15px;
+    }
+    .background-section .middle-block .before-slogan{
+        font-size: 16px;
+    }
+    .background-section .middle-block .slogan{
+        font-size: 26px;
+    }
+}
+
+
