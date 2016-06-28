@@ -39,9 +39,9 @@
 					<div class="header-menu" >
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="/">HOME</a></li>
-							<li><a href="#">ABOUT US</a></li>
-							<li><a href="#">OUR TEAM</a></li>
-							<li><a href="#">SERVICESk</a></li>
+							<li><a href="/about-us">ABOUT US</a></li>
+							<li><a href="/our-team">OUR TEAM</a></li>
+							<li><a href="#">SERVICES</a></li>
 							<li><a href="/cdl-clearance">CDL CLEARANCE</a></li>
 							<li class="contact-us text-center"><a href="#">CONTACT US</a></li>
 						</ul>
@@ -54,9 +54,9 @@
 <div id="page-content">
 	<?php
 	$image = get_field('bg-page');
-
-	if( !empty($image) ): ?>
-		<div class="background-section" style="height: 735px; background: url('<?php echo $image['url']; ?>') center no-repeat; background-size: cover">
+	if( !empty($image) ){ ?>
+		<?php if (is_front_page()) {?>
+			<div class="background-section" style="height: 735px; background: url('<?php echo $image['url']; ?>') center no-repeat; background-size: cover">
 			<div class="content-page">
 				<div class="middle-block text-center">
 					<p class="before-slogan">
@@ -73,4 +73,58 @@
 				</div>
 			</div>
 		</div>
-	<?php endif; ?>
+		<?php }else {?>
+			<div class="background-section" style="height: 735px; background: url('<?php echo $image['url']; ?>') center no-repeat; background-size: cover">
+				<div class="content-page">
+					<div class="middle-block text-center">
+						<p class="before-slogan">
+
+						</p>
+						<p class="slogan">
+							<?php echo get_the_title();?>
+						</p>
+					</div>
+				</div>
+			</div>
+		<?php }?>
+	<?php }else{?>
+	<?php
+		$linkAboutUs = "/about-us/";
+		$currentLink = $_SERVER["REQUEST_URI"];
+		if($linkAboutUs == $currentLink):?>
+		<div class="about-us-slider">
+			<div class="item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide-7.jpg" alt=""/>
+				<div class="dark-layer"></div>
+			</div>
+			<div class="item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/doctor.jpg" alt=""/>
+				<div class="dark-layer"></div>
+			</div>
+			<div class="item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide-2.jpg" alt=""/>
+				<div class="dark-layer"></div>
+			</div>
+			<div class="item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide-3.jpg" alt=""/>
+				<div class="dark-layer"></div>
+			</div>
+			<div class="item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide-4.jpg" alt=""/>
+				<div class="dark-layer"></div>
+			</div>
+			<div class="item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide-5.jpg" alt=""/>
+				<div class="dark-layer"></div>
+			</div>
+			<div class="item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide-6.jpg" alt=""/>
+				<div class="dark-layer"></div>
+			</div>
+			<div class="item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide-8.jpg" alt=""/>
+				<div class="dark-layer"></div>
+			</div>
+		</div>
+		<?php endif;?>
+	<?php } ?>

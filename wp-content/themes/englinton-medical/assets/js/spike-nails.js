@@ -1,9 +1,18 @@
 /**
  * Created by V1pBoy on 27.06.2016.
  */
+
+    $('.about-us-slider').owlCarousel({
+        items:1,
+        loop:true,
+        nav:true,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        mouseDrag: false,
+        navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"]
+    });
+
 $(document).ready(function () {
-
-
     // Enter your ids or classes
     var toggler = '.navbar-toggle';
     var pagewrapper = '#page-content';
@@ -43,14 +52,8 @@ $(document).ready(function () {
 
 
         $('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
-
-
     });
-
-
     var selected = '#slidemenu, #page-content, body, .navbar, .navbar-header';
-
-
     $(window).on("resize", function () {
 
         if ($(window).width() > 767 && $('.navbar-toggle').is(':hidden')) {

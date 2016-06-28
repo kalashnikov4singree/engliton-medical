@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: CDL CLEARANCE
+ * Template Name: Our Team Template
  *
  * @package WordPress
  * @subpackage Twenty_Fourteen
@@ -10,7 +10,7 @@ get_header();
 ?>
     <div class="wrapper">
         <div class="container">
-            <div class="cdl-clearence-content">
+            <div class="our-team-content">
             <?php if (have_posts()) : while (have_posts()) : the_post();?>
                 <?php the_content(); ?>
             <?php endwhile; endif; ?>
@@ -18,5 +18,4 @@ get_header();
         </div>
     </div>
 </div><!-- Page Content End -->
-
 <?php get_footer() ?>
