@@ -323,6 +323,30 @@ body{
 .our-team-content strong{
     color: rgba(26,26,26,.9);
 }
+.services-content .content-page{
+    color: #4a4a4a;
+    font-family: Proximanova-regular;
+    padding-bottom: 50px;
+    padding-top: 17px;
+    border-bottom: 1px solid rgba(26,26,26,.15);
+    margin-bottom: 50px;
+}
+.services-content .services .item{
+    margin-bottom: 35px;
+    font-family: Adobe-Garamond-Pro;
+    color: rgba(26,26,26,.7);
+    float: left;
+    width: 100%;
+}
+.services-content .services .title{
+    color: rgba(26,26,26,.9);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.services-content .services .img-block img{
+    width: 100%;
+}
 .footer{
     position: absolute;
     width: 100%;

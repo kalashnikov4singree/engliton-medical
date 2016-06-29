@@ -41,7 +41,7 @@
 							<li><a href="/">HOME</a></li>
 							<li><a href="/about-us">ABOUT US</a></li>
 							<li><a href="/our-team">OUR TEAM</a></li>
-							<li><a href="#">SERVICES</a></li>
+							<li><a href="/services">SERVICES</a></li>
 							<li><a href="/cdl-clearance">CDL CLEARANCE</a></li>
 							<li class="contact-us text-center"><a href="#">CONTACT US</a></li>
 						</ul>

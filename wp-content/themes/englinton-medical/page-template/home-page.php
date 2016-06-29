@@ -17,6 +17,11 @@ get_header();
                     </a>
                 </div>
                 <div class="row">
+               <?php
+                query_posts('cat=2');
+                while (have_posts()) : the_post();?>
+                    <a href="/services/#<?php the_field('anchor-link'); ?>">LearnMore</a>
+                <?php endwhile;?>
                     <div class="col-sm-4">
                         <div class="item text-center">
                             <div class="img-item">
