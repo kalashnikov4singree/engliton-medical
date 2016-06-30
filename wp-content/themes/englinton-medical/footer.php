@@ -11,11 +11,49 @@
 ?>
 
 <footer>
-	<div class="footer text-center" id="footer-slide">
+	<div class="footer" id="footer-slide">
 		<div class="top-footer"></div>
 		<div class="bottom-footer">
-			<div class="create-by">
-				Powered by <a href="#">Singree</a>
+			<div class="container-fluid">
+				<div class="footer-brand text-left">
+					ENGLINTON MEDICAL P.C.
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="menu-footer">
+							<div class="title-footer">
+								Services:
+							</div>
+							<ul class="list-unstyled">
+								<li><a href="/">HOME</a></li>
+								<li><a href="/about-us">ABOUT US</a></li>
+								<li><a href="/our-team">OUR TEAM</a></li>
+								<li><a href="/services">SERVICES</a></li>
+								<li><a href="/cdl-clearance">CDL CLEARANCE</a></li>
+								<li><a href="/contact-us">CONTACT US</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="row">
+							<div class="col-sm-7 col-sm-offset-5  col-md-5 col-sm-offset-7 title-footer">
+								Contact Us:
+							</div>
+							<div class="col-sm-7 col-sm-offset-5  col-md-5 col-sm-offset-7 ">
+								<div class="address-block">
+									95-25 Jamaica Ave
+									Woodhaven, NY 11421
+									(718) 441-4070
+								</div>
+								<div class="work-day">
+									Monday – Friday: 9AM – 8PM <br/>
+									Saturday: Closed <br/>
+									Sunday: Closed <br/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

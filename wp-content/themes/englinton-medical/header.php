@@ -43,7 +43,7 @@
 							<li><a href="/our-team">OUR TEAM</a></li>
 							<li><a href="/services">SERVICES</a></li>
 							<li><a href="/cdl-clearance">CDL CLEARANCE</a></li>
-							<li class="contact-us text-center"><a href="#">CONTACT US</a></li>
+							<li class="contact-us text-center"><a href="/contact-us">CONTACT US</a></li>
 						</ul>
 					</div><!-- /.navbar-collapse -->
 				</div>
@@ -66,7 +66,7 @@
 						WE CARE ABOUT YOUR HEALTH!
 					</p>
 					<p>
-						<a href="#" target="_blank">
+						<a href="https://www.zocdoc.com/practice/arkadiy-shusterman-22635?referrerType=widget" target="_blank">
 							BOOK ONLINE
 						</a>
 					</p>

@@ -57,7 +57,7 @@ html{
     min-height: 100%;
 }
 body{
-    margin-bottom: 250px;
+    margin-bottom: 500px;
     height: 100%;
 }
 .inline-block{
@@ -201,7 +201,8 @@ body{
     margin-bottom: 30px;
 }
 .our-specialities .img-item img{
-    width: 100%;
+    max-width: 300px;
+    max-height: 200px;
 }
 .our-specialities .title-item{
     color: rgba(26,26,26,.7);
@@ -347,11 +348,20 @@ body{
 .services-content .services .img-block img{
     width: 100%;
 }
+.contact-us-content{
+    font-family: Proximanova-regular;
+}
 .footer{
     position: absolute;
     width: 100%;
     z-index: 33;
     bottom: 0;
+    color: #fff;
+    font-family: Proximanova-light;
+}
+.footer a{
+    color: #fff;
+    text-decoration: none;
 }
 .footer .top-footer{
     padding: 32px 0;
@@ -359,18 +369,26 @@ body{
 
 }
 .footer .bottom-footer{
-    padding: 64px 0;
+    padding: 64px 0 40px;
     background: #1f1f1f;
-    font-family: Adobe-Garamond-Pro;
     font-size: 18px;
 }
-.footer .bottom-footer .create-by{
-    margin-top: 1.5em;
-    color: rgba(255,255,255,.4);
+.footer .bottom-footer .footer-brand{
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-family: Proximanova-regular;
 }
-.footer .bottom-footer .create-by a{
-    text-decoration: underline;
-    color: rgba(255,255,255,.4);
+.footer .bottom-footer .title-footer{
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #555;
+}
+.footer .bottom-footer .menu-footer ul>li{
+    padding: 5px 0;
+    font-size: 14px;
+}
+.footer .bottom-footer .address-block{
+    margin-bottom: 20px;
 }
 @media (max-width: 991px) {
     .navbar-toggle{
@@ -483,6 +501,9 @@ body{
     }
 }
 @media (max-width: 767px) {
+    body{
+        margin-bottom: 630px;
+    }
     .background-section{
         height: auto !important;
     }

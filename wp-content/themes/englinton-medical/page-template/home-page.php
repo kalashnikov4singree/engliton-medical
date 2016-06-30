@@ -18,106 +18,25 @@ get_header();
                 </div>
                 <div class="row">
                <?php
-                query_posts('cat=2');
+                query_posts('cat=2&showposts=6');
                 while (have_posts()) : the_post();?>
-                    <a href="/services/#<?php the_field('anchor-link'); ?>">LearnMore</a>
+                    <div class="col-sm-4">
+                        <div class="item text-center">
+                            <div class="img-item">
+                                <?php the_post_thumbnail(); ?>
+                            </div>
+                            <div class="title-item">
+                                <?php the_title(); ?>
+                            </div>
+                            <div class="learn-more">
+                                <a href="/services/#<?php the_field('anchor-link'); ?>">
+                                    Learn More
+                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 <?php endwhile;?>
-                    <div class="col-sm-4">
-                        <div class="item text-center">
-                            <div class="img-item">
-                                <img src="<?php echo get_template_directory_uri() ?>/assets/img/img-specialities-1.jpg" alt=""/>
-                            </div>
-                            <div class="title-item">
-                                PHYSICAL THERAPY
-                            </div>
-                            <div class="learn-more">
-                                <a href="#">
-                                    Learn More
-                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="item text-center">
-                            <div class="img-item">
-                                <img src="<?php echo get_template_directory_uri() ?>/assets/img/brain.jpg" alt=""/>
-                            </div>
-                            <div class="title-item">
-                                NEUROLOGY
-                            </div>
-                            <div class="learn-more">
-                                <a href="#">
-                                    Learn More
-                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="item text-center">
-                            <div class="img-item">
-                                <img src="<?php echo get_template_directory_uri() ?>/assets/img/img-specialities-2.jpg" alt=""/>
-                            </div>
-                            <div class="title-item">
-                                CHIROPRACTIC
-                            </div>
-                            <div class="learn-more">
-                                <a href="#">
-                                    Learn More
-                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="item text-center">
-                            <div class="img-item">
-                                <img src="<?php echo get_template_directory_uri() ?>/assets/img/img-specialities-3.jpg" alt=""/>
-                            </div>
-                            <div class="title-item">
-                                ACUPUNCTURE
-                            </div>
-                            <div class="learn-more">
-                                <a href="#">
-                                    Learn More
-                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="item text-center">
-                            <div class="img-item">
-                                <img src="<?php echo get_template_directory_uri() ?>/assets/img/img-specialities-4.jpg" alt=""/>
-                            </div>
-                            <div class="title-item">
-                                PAIN MANAGEMENT
-                            </div>
-                            <div class="learn-more">
-                                <a href="#">
-                                    Learn More
-                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="item text-center">
-                            <div class="img-item">
-                                <img src="<?php echo get_template_directory_uri() ?>/assets/img/img-specialities-5.jpg" alt=""/>
-                            </div>
-                            <div class="title-item">
-                                MASSAGE THERAPY
-                            </div>
-                            <div class="learn-more">
-                                <a href="#">
-                                    Learn More
-                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="insurance section text-center">
