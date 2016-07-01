@@ -19,9 +19,9 @@ $(document).ready(function () {
     var footerContent = '#footer-slide';
     var navigationwrapper = '.navbar-header';
     var menuwidth = '100%'; // the menu inside the slide menu itself
-    var slidewidth = '260px';
+    var slidewidth = '240px';
     var menuneg = '-100%';
-    var slideneg = '-260px';
+    var slideneg = '-240px';
 
 
     $("#slide-nav").on("click", toggler, function (e) {

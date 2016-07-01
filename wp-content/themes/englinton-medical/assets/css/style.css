@@ -64,7 +64,7 @@ body{
     display: inline-block;
     vertical-align: middle;
 }
-.title-block{
+.title-block h2{
     font-size: 32px;
     margin-bottom: 25px;
     font-family: Adobe-Garamond-Pro;
@@ -94,6 +94,7 @@ body{
     padding: 0;
     line-height: 1em;
     margin: 0;
+    width: 150px;
 }
 .header .navbar .header-menu ul>li>a{
     font-size: 13px;
@@ -155,6 +156,8 @@ body{
     font-family:Proximanova-bold;
     font-size: 68px;
     text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 0;
 }
 .background-section .middle-block  p>a{
     border-radius: 300px;
@@ -209,6 +212,7 @@ body{
     margin-bottom: 15px;
     margin-top: 27px;
     font-size: 22px;
+    text-transform: uppercase;
 }
 .our-specialities .learn-more a{
     color: #3d9991;
@@ -339,11 +343,12 @@ body{
     float: left;
     width: 100%;
 }
-.services-content .services .title{
+.services-content .services .title h2{
     color: rgba(26,26,26,.9);
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 25px;
+    margin-top: 0;
 }
 .services-content .services .img-block img{
     width: 100%;
@@ -413,16 +418,21 @@ body{
     #slide-nav .navbar-toggle {
         cursor: pointer;
         position: relative;
-        line-height: 0;
         float: right;
         margin: 0;
         width: 30px;
-        height: 40px;
+        height: 27px;
         padding: 0;
         border: 0;
         background: transparent;
-        font-size: 30px;
         color: #fff;
+    }
+    #slide-nav .navbar-toggle:after{
+        font: normal normal normal 20px/0 FontAwesome;
+        content: "\f0c9";
+    }
+    #slide-nav .navbar-toggle.slide-active:after{
+        content: "\f00d";
     }
     /* icon bar prettyup - optional */
     #slide-nav .navbar-toggle > .icon-bar {
@@ -457,7 +467,7 @@ body{
     #slide-nav #slidemenu {
         background: #212121;
         right: -100%;
-        width: 260px;
+        width: 240px;
         min-width: 0;
         position: fixed;
         height: 100%;
@@ -488,6 +498,10 @@ body{
     #slide-nav.navbar-inverse #slidemenu {
         background: #333
     }
+    .our-specialities .img-item img{
+        max-width: 200px;
+        max-height: 130px;
+    }
 }
 @media (min-width:992px) {
     #page-content {
@@ -504,20 +518,47 @@ body{
     body{
         margin-bottom: 630px;
     }
+    .header .navbar .navbar-brand{
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        margin-top: 8px;
+        width: 210px;
+    }
     .background-section{
         height: auto !important;
     }
     .background-section .content-page{
-        padding: 50px 0;
+        padding: 15px 0;
     }
     .background-section .content-page .middle-block{
-        padding: 15px;
+        padding: 32px;
     }
     .background-section .middle-block .before-slogan{
         font-size: 16px;
     }
     .background-section .middle-block .slogan{
-        font-size: 26px;
+        font-size: 32px;
+    }
+    .wrapper{
+        padding: 40px 0;
+    }
+    .insurance .content{
+        font-size: 16px;
+        line-height: 27px;
+        letter-spacing: 2px;
+    }
+    .text-after-insurance{
+        padding: 25px 0;
+    }
+    .section{
+        padding: 0;
+    }
+    .testimonials{
+        padding: 20px 0;
+    }
+    .our-specialities .img-item img{
+        max-width: 100%;
+        max-height: inherit;
     }
 }
 

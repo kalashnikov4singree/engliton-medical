@@ -41,7 +41,7 @@ get_header();
             </div>
             <div class="insurance section text-center">
                 <div class="title-block">
-                    Insurance
+                    <h2>Insurance</h2>
                 </div>
                 <div class="content">
                     WE ACCEPTS MOST MAJOR MEDICAL INSURANCE'S AS WELL AS MEDICARE/MEDICAID,
@@ -82,6 +82,9 @@ get_header();
                 </div>
             </div>
             <div class="testimonials">
+                <div class="title-block text-center">
+                    <h2>Testimonials</h2>
+                </div>
                 <div class="row">
                     <div class="col-sm-6 text-center">
                         <div class="item">

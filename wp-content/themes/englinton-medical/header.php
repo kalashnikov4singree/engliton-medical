@@ -15,7 +15,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<![endif]-->
+	<!--[endif]-->
 	<?php wp_head(); ?>
 </head>
 
@@ -26,11 +26,9 @@
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed">
-						<i class="fa fa-bars" aria-hidden="true"></i>
-					</button>
+					<button type="button" class="navbar-toggle collapsed"></button>
 					<a class="navbar-brand" href="/">
-						ENGLINTON <br/>
+						ENGLINTON
 						MEDICAL P.C.
 					</a>
 				</div>
@@ -62,9 +60,9 @@
 					<p class="before-slogan">
 						Pain Management & Medical Services
 					</p>
-					<p class="slogan">
+					<h1 class="slogan">
 						WE CARE ABOUT YOUR HEALTH!
-					</p>
+					</h1>
 					<p>
 						<a href="https://www.zocdoc.com/practice/arkadiy-shusterman-22635?referrerType=widget" target="_blank">
 							BOOK ONLINE
@@ -80,9 +78,9 @@
 						<p class="before-slogan">
 
 						</p>
-						<p class="slogan">
+						<h1 class="slogan">
 							<?php echo get_the_title();?>
-						</p>
+						</h1>
 					</div>
 				</div>
 			</div>

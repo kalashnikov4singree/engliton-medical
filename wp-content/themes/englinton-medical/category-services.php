@@ -23,7 +23,7 @@ get_header();
                         <?php if ($count % 2 == 0 ){ ?>
                             <div id="<?php the_field('anchor-link'); ?>" class="item">
                                 <div class="title text-center">
-                                    <?php the_title(); ?>
+                                    <h2><?php the_title(); ?></h2>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6">
@@ -41,7 +41,7 @@ get_header();
                         <?php }else{?>
                             <div id="<?php the_field('anchor-link'); ?>" class="item">
                                 <div class="title text-center">
-                                    <?php the_title(); ?>
+                                    <h2><?php the_title(); ?></h2>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="content-block">
