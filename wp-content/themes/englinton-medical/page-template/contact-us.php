@@ -18,9 +18,7 @@ get_header();
                     <?php endwhile; endif; ?>
                 </div>
                 <div class="col-sm-6">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48049518.783250526!2d-129.5563690932181!3d42.68868734941173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDE5JzIzLjkiTiAxMDDCsDIyJzM0LjQiVw!5e0!3m2!1sru!2sua!4v1467316513346"  frameborder="0" style="border:0; width: 100%; height: 400px;" allowfullscreen></iframe>
-                 </div>
-            </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3025.0778299095173!2d-73.84967309665068!3d40.694283509566105!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25dfdb6d790c3%3A0x9aad53b9a8627c5b!2zOTUtMjUgSmFtYWljYSBBdmUsIFF1ZWVucywgTlkgMTE0MjEsINCh0KjQkA!5e0!3m2!1sru!2sua!4v1467380340353" frameborder="0" style="width: 100%;height: 500px;border:0" allowfullscreen></iframe>            </div>
 
             </div>
         </div>

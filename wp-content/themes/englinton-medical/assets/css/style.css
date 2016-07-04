@@ -94,7 +94,7 @@ body{
     padding: 0;
     line-height: 1em;
     margin: 0;
-    width: 150px;
+    width: 160px;
 }
 .header .navbar .header-menu ul>li>a{
     font-size: 13px;
@@ -456,7 +456,7 @@ body{
     }
     #slide-nav .navbar-header {
         margin: 0 auto;
-        padding: 0 15px;
+        padding: 0;
     }
     #slide-nav .navbar.slide-active {
         position: absolute;
@@ -502,6 +502,9 @@ body{
         max-width: 200px;
         max-height: 130px;
     }
+    .header .navbar{
+        padding: 20px 0;
+    }
 }
 @media (min-width:992px) {
     #page-content {
@@ -516,7 +519,7 @@ body{
 }
 @media (max-width: 767px) {
     body{
-        margin-bottom: 630px;
+        margin-bottom: 700px;
     }
     .header .navbar .navbar-brand{
         font-size: 14px;
@@ -531,7 +534,7 @@ body{
         padding: 15px 0;
     }
     .background-section .content-page .middle-block{
-        padding: 32px;
+        padding: 50px;
     }
     .background-section .middle-block .before-slogan{
         font-size: 16px;

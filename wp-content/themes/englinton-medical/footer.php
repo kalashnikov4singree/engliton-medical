@@ -14,7 +14,7 @@
 	<div class="footer" id="footer-slide">
 		<div class="top-footer"></div>
 		<div class="bottom-footer">
-			<div class="container-fluid">
+			<div class="container">
 				<div class="footer-brand text-left">
 					ENGLINTON MEDICAL P.C.
 				</div>
