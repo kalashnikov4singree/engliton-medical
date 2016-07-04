@@ -23,13 +23,15 @@ get_header();
                     <div class="col-sm-4">
                         <div class="item text-center">
                             <div class="img-item">
-                                <?php the_post_thumbnail(); ?>
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php the_post_thumbnail(); ?>
+                                </a>
                             </div>
                             <div class="title-item">
                                 <?php the_title(); ?>
                             </div>
                             <div class="learn-more">
-                                <a href="/services/#<?php the_field('anchor-link'); ?>">
+                                <a href="<?php the_permalink(); ?>">
                                     Learn More
                                     <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                                 </a>

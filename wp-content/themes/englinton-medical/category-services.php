@@ -33,7 +33,13 @@ get_header();
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="content-block">
-                                            <?php the_content(); ?>
+                                            <?php the_field('short-description'); ?>
+                                        </div>
+                                        <div class="learn-more">
+                                            <a href="<?php the_permalink(); ?>">
+                                                Learn More
+                                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -45,7 +51,13 @@ get_header();
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="content-block">
-                                        <?php the_content(); ?>
+                                        <?php the_field('short-description'); ?>
+                                    </div>
+                                    <div class="learn-more">
+                                        <a href="<?php the_permalink(); ?>">
+                                            Learn More
+                                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
