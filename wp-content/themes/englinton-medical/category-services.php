@@ -26,12 +26,12 @@ get_header();
                                     <h2><?php the_title(); ?></h2>
                                 </div>
                                 <div class="row">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6 inline-services">
                                         <div class="img-block">
                                             <?php the_post_thumbnail(); ?>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6 inline-services">
                                         <div class="content-block">
                                             <?php the_field('short-description'); ?>
                                         </div>
@@ -49,7 +49,7 @@ get_header();
                                 <div class="title text-center">
                                     <h2><?php the_title(); ?></h2>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-6 inline-services">
                                     <div class="content-block">
                                         <?php the_field('short-description'); ?>
                                     </div>
@@ -60,7 +60,7 @@ get_header();
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-6 inline-services">
                                     <div class="img-block">
                                         <?php the_post_thumbnail(); ?>
                                     </div>

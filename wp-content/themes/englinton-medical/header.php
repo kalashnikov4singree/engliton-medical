@@ -74,10 +74,7 @@
 		<?php }else {?>
 			<div class="background-section" style="height: 735px; background: url('<?php echo $image['url']; ?>') center no-repeat; background-size: cover">
 				<div class="content-page">
-					<div class="middle-block text-center">
-						<p class="before-slogan">
-
-						</p>
+					<div class="middle-block single-page text-center">
 						<h1 class="slogan">
 							<?php echo get_the_title();?>
 						</h1>
@@ -133,7 +130,7 @@
 	if( !empty($image) ) { ?>
 		<div class="background-section" style="height: 735px; background: url('<?php echo $image['url']; ?>') center no-repeat; background-size: cover">
 			<div class="content-page">
-				<div class="middle-block text-center">
+				<div class="middle-block single-page text-center">
 					<p class="before-slogan">
 
 					</p>
@@ -146,10 +143,7 @@
 	<?php }else{ ?>
 		<div class="background-section" style="height: 735px; background: url('<?php echo get_template_directory_uri(); ?>/assets/img/Meaningful-Use-1.jpg') center no-repeat; background-size: cover">
 			<div class="content-page">
-				<div class="middle-block text-center">
-					<p class="before-slogan">
-
-					</p>
+				<div class="middle-block single-page text-center">
 					<h1 class="slogan">
 						<?php echo get_the_title();?>
 					</h1>

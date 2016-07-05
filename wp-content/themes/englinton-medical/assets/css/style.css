@@ -60,6 +60,12 @@ body{
     margin-bottom: 500px;
     height: 100%;
 }
+.inline-services{
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    margin-right: -5px;
+}
 .alignleft{
     float: left;
     margin: 0 10px 10px 0;
@@ -138,6 +144,7 @@ body{
     height: 100%;
     padding: 180px 0 155px;
     background: rgba(0,0,0,0.4);
+    position: relative;
 }
 .background-section .content-page .middle-block{
     width: 100%;
@@ -149,6 +156,13 @@ body{
     padding: 32px;
     text-align: center;
     text-rendering: optimizeLegibility;
+}
+.background-section .middle-block.single-page{
+    position: absolute;
+    top:50%;
+    left: 0;
+    right: 0;
+    margin: -80px auto 0 auto;
 }
 .background-section .middle-block p{
     margin: 20px 0;
@@ -533,6 +547,9 @@ body{
     body{
         margin-bottom: 700px;
     }
+    .inline-services{
+        margin-right: 0;
+    }
     .header .navbar .navbar-brand{
         font-size: 14px;
         letter-spacing: 0.5px;
@@ -540,7 +557,7 @@ body{
         width: 210px;
     }
     .background-section{
-        height: auto !important;
+        height:370px !important;
     }
     .background-section .content-page{
         padding: 15px 0;
@@ -553,6 +570,10 @@ body{
     }
     .background-section .middle-block .slogan{
         font-size: 32px;
+    }
+    .background-section .middle-block.single-page{
+        margin: -40px 0 0 0;
+        padding: 0;
     }
     .wrapper{
         padding: 40px 0;
