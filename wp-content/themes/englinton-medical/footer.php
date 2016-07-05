@@ -36,13 +36,13 @@
 					</div>
 					<div class="col-sm-6">
 						<div class="row">
-							<div class="col-sm-7 col-sm-offset-5  col-md-5 col-sm-offset-7 title-footer">
+							<div class="col-sm-9 col-sm-offset-3 col-md-7 col-sm-offset-5 col-lg-6 col-lg-offset-6 title-footer">
 								Contact Us:
 							</div>
-							<div class="col-sm-7 col-sm-offset-5  col-md-5 col-sm-offset-7 ">
+							<div class="col-sm-9 col-sm-offset-3  col-md-7 col-sm-offset-5 col-lg-6 col-lg-offset-6">
 								<div class="address-block">
 									95-25 Jamaica Ave
-									Woodhaven, NY 11421
+									Woodhaven, NY 11421 <br>
 									(718) 441-4070
 								</div>
 								<div class="work-day">
