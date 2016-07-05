@@ -60,6 +60,14 @@ body{
     margin-bottom: 500px;
     height: 100%;
 }
+.alignleft{
+    float: left;
+    margin: 0 10px 10px 0;
+}
+.alignright{
+    float: right;
+    margin: 0 0 10px 10px;
+}
 .inline-block{
     display: inline-block;
     vertical-align: middle;
@@ -311,6 +319,8 @@ body{
     color: rgba(26,26,26,.7);
     font-family: Adobe-Garamond-Pro;
     line-height: 29px;
+    font-size: 20px;
+    text-align: justify;
 }
 .about-us-content p{
     margin-bottom: 30px;
@@ -335,6 +345,7 @@ body{
     padding-top: 17px;
     border-bottom: 1px solid rgba(26,26,26,.15);
     margin-bottom: 50px;
+    font-size: 20px;
 }
 .services-content .services .item{
     margin-bottom: 35px;
@@ -342,6 +353,7 @@ body{
     color: rgba(26,26,26,.7);
     float: left;
     width: 100%;
+    font-size: 20px;
 }
 .services-content .services .title h2{
     color: rgba(26,26,26,.9);
