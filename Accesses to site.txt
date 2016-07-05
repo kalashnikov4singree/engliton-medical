@@ -1,0 +1,3 @@
+wp-admin
+login: administrator
+password: XlP@tNMTeFqs5aG^
