@@ -15,6 +15,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 	<!--[endif]-->
 	<?php wp_head(); ?>
 </head>
@@ -41,6 +42,7 @@
 							<li><a href="/our-team">OUR TEAM</a></li>
 							<li><a href="/services">SERVICES</a></li>
 							<li><a href="/cdl-clearance">CDL CLEARANCE</a></li>
+							<li><a href="/blog">BLOG</a></li>
 							<li class="contact-us text-center"><a href="/contact-us">CONTACT US</a></li>
 						</ul>
 					</div><!-- /.navbar-collapse -->

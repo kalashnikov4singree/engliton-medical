@@ -366,6 +366,7 @@ require get_template_directory() . '/inc/template-tags.php';
  *
  * @since Twenty Fifteen 1.0
  */
+
 require get_template_directory() . '/inc/customizer.php';
 function remove_image_size_attributes( $html ) {
 	return preg_replace( '/(width|height)="\d*"/', '', $html );
@@ -376,3 +377,150 @@ add_filter( 'post_thumbnail_html', 'remove_image_size_attributes' );
 
 // Remove image size attributes from images added to a WordPress post
 add_filter( 'image_send_to_editor', 'remove_image_size_attributes' );
+
+
+// просмотры
+function getPostViews($postID){
+	$count_key = 'post_views_count';
+	$count = get_post_meta($postID, $count_key, true);
+	if($count==''){
+		delete_post_meta($postID, $count_key);
+		add_post_meta($postID, $count_key, '0');
+		return "0";
+	}
+	return $count;
+}
+function setPostViews($postID) {
+	$count_key = 'post_views_count';
+	$count = get_post_meta($postID, $count_key, true);
+	if($count==''){
+		$count = 0;
+		delete_post_meta($postID, $count_key);
+		add_post_meta($postID, $count_key, '0');
+	}else{
+		$count++;
+		update_post_meta($postID, $count_key, $count);
+	}
+}
+add_filter('manage_posts_columns', 'posts_column_views');
+add_action('manage_posts_custom_column', 'posts_custom_column_views',5,2);
+function posts_column_views($defaults){
+	$defaults['post_views'] = __('Просмотры');
+	return $defaults;
+}
+function posts_custom_column_views($column_name, $id){
+	if($column_name === 'post_views'){
+		echo getPostViews(get_the_ID());
+	}
+}
+
+
+
+function site_request($query_string ) {
+	if ( isset( $query_string['page'] ) ) {
+		if ( ''!=$query_string['page'] ) {
+			if ( isset( $query_string['name'] ) ) {
+				unset( $query_string['name'] ); }
+		}
+	}
+	return $query_string;
+}
+add_filter('request', 'site_request');
+
+add_action('pre_get_posts', 'site_pre_get_posts');
+function site_pre_get_posts( $query ) {
+	if ( $query->is_main_query() && !$query->is_feed() && !is_admin() ) {
+		$query->set( 'paged', str_replace( '/', '', get_query_var( 'page' ) ) );
+	}
+}
+
+
+function archive_filter_blog(){
+// get years that have posts
+	global $wpdb;
+	$years = $wpdb->get_results( "SELECT YEAR(post_date) AS year FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY year DESC" );
+	$post_per_month= $wpdb->get_results( "SELECT YEAR(  `post_date` ) as `year`, MONTH(  `post_date` ) as `month` , COUNT( * ) AS cnt FROM  `wp_posts` INNER JOIN wp_term_relationships ON ID = object_id WHERE post_type =  'post' AND post_status =  'publish' AND term_taxonomy_id =  '5' GROUP BY YEAR(  `post_date` ) , MONTH(  `post_date` )  ORDER BY 1 , 2 ASC LIMIT 0 , 30" );
+	$counts = array();
+	foreach ($post_per_month as $val) {
+		if (!$counts[$val->year]) {
+			$counts[$val->year] = array();
+		}
+			$counts[$val->year][$val->month] = $val->cnt;
+	}
+	
+	foreach ( $years as $year ) {
+		echo '<div class="panel panel-default">';
+		echo '<div class="panel-heading" role="tab" id="heading'. $year->year  .'">';
+		echo '<a role="button" data-toggle="collapse" data-parent="#accordion-blog" href="#'. $year->year  .'" aria-expanded="true" aria-controls="heading'. $year->year  .'">'. $year->year. '</a>' ;
+		echo '</div>';
+		echo '<div id="'. $year->year .'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading'. $year->year .'">';
+		echo '<div class="panel-body">';
+		$months= $wpdb->get_results( "SELECT MONTHNAME(post_date) AS month, MONTH(post_date) AS mnth FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' AND YEAR(post_date) = '" . $year->year . "' GROUP BY month ASC" );
+		foreach ($months as $month){
+			/** WP Query Arguments */
+			$posts_this_month = $wpdb->get_results( "SELECT post_title, post_name FROM wp_posts INNER JOIN wp_term_relationships ON ID = object_id WHERE post_type = 'post' AND post_status = 'publish' AND YEAR(post_date) = '" . $year->year . "' AND  MONTHNAME(post_date)  = '" . $month->month . "' AND term_taxonomy_id = '5' " );
+			//var_dump($key);
+			echo '<a class="month-link" data-toggle="collapse" href="#'.$year->year.''. $month->month .'" aria-expanded="false" aria-controls="'.$year->year.''. $month->month .'">' . $month->month .'<span class="count-month">('. $counts[$year->year][$month->mnth].')</span></a>';
+			echo '<div class="collapse" id="'.$year->year.''. $month->month .'">';
+			echo '<div class="body-month">';
+			foreach ( $posts_this_month as $post ) {
+				echo '<a href="'.$post->post_name.'">'.$post->post_title .'</a>';
+			}
+			echo'</div>';
+			echo'</div>';
+		}
+		echo '</div>';
+		echo '</div>';
+		echo '</div>';
+	}
+}
+
+function mytheme_comment($comment, $args, $depth) {
+	$GLOBALS['comment'] = $comment; ?>
+<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
+	<div id="comment-<?php comment_ID(); ?>">
+		<div class="comment-author vcard">
+			<?php printf(__('<cite class="author">%s</cite>'), get_comment_author()) ?>
+			<span class="date">
+				<?php printf(__('%1$s'), get_comment_date()) ?>
+			</span>
+		</div>
+		<?php if ($comment->comment_approved == '0') : ?>
+			<em><?php _e('Your comment is awaiting moderation.') ?></em>
+			<br />
+		<?php endif; ?>
+
+		<div class="comment-meta commentmetadata">
+
+			<?php edit_comment_link(__('(Edit)'),'  ','') ?>
+		</div>
+		<div class="comment-text">
+			<?php comment_text() ?>
+		</div>
+		<div class="reply">
+			<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+		</div>
+	</div>
+	<?php
+}
+
+add_filter('comment_form_fields', 'kama_reorder_comment_fields' );
+function kama_reorder_comment_fields( $fields ){
+	// die(print_r( $fields )); // посмотрим какие поля есть
+
+	$new_fields = array(); // сюда соберем поля в новом порядке
+
+	$myorder = array('author','email','comment'); // нужный порядок
+
+	foreach( $myorder as $key ){
+		$new_fields[ $key ] = $fields[ $key ];
+		unset( $fields[ $key ] );
+	}
+
+	// если остались еще какие-то поля добавим их в конец
+	if( $fields )
+		foreach( $fields as $key => $val )
+			$new_fields[ $key ] = $val;
+
+	return $new_fields;
+}

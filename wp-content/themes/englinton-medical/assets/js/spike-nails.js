@@ -1,17 +1,23 @@
 /**
  * Created by V1pBoy on 27.06.2016.
  */
-
-    $('.about-us-slider').owlCarousel({
-        items:1,
-        loop:true,
-        nav:true,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-        mouseDrag: false,
-        navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"]
-    });
-
+function tagsHide(){
+    var windowWidht = $(window).width();
+    if (windowWidht < 768 ){
+        $(".tag-block .title-block").on("click",function () {
+            $(".tag-block .list-tags").toggleClass("show");
+        })
+    }
+}
+$('.about-us-slider').owlCarousel({
+    items:1,
+    loop:true,
+    nav:true,
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
+    mouseDrag: false,
+    navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"]
+});
 $(document).ready(function () {
     // Enter your ids or classes
     var toggler = '.navbar-toggle';
@@ -22,7 +28,6 @@ $(document).ready(function () {
     var slidewidth = '240px';
     var menuneg = '-100%';
     var slideneg = '-240px';
-
 
     $("#slide-nav").on("click", toggler, function (e) {
 
@@ -59,11 +64,6 @@ $(document).ready(function () {
         if ($(window).width() > 767 && $('.navbar-toggle').is(':hidden')) {
             $(selected).removeClass('slide-active');
         }
-
-
     });
-
-
-
-
+    tagsHide();
 });

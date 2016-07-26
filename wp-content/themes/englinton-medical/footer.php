@@ -30,6 +30,7 @@
 								<li><a href="/our-team">OUR TEAM</a></li>
 								<li><a href="/services">SERVICES</a></li>
 								<li><a href="/cdl-clearance">CDL CLEARANCE</a></li>
+								<li><a href="/blog">BLOG</a></li>
 								<li><a href="/contact-us">CONTACT US</a></li>
 							</ul>
 						</div>
@@ -46,7 +47,8 @@
 									(718) 441-4070
 								</div>
 								<div class="work-day">
-									Monday – Friday: 9AM – 8PM <br/>
+									Monday – Thursday: 9AM – 8PM <br/>
+									Friday: 9AM – 4PM <br/>
 									Saturday: Closed <br/>
 									Sunday: Closed <br/>
 								</div>
