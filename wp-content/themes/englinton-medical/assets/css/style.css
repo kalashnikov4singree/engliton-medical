@@ -60,6 +60,16 @@ body{
     margin-bottom: 530px;
     height: 100%;
 }
+.accordion-year:after{
+    /* symbol for "opening" panels */
+    font: normal normal normal 22px/1 FontAwesome;/* essential for enabling glyphicon */
+    content: "\f106";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: grey;
+}
+.accordion-year.collapsed:after{
+    content: "\f107";
+}
 .inline-services{
     display: inline-block;
     vertical-align: middle;
@@ -318,11 +328,6 @@ body{
 .about-us-slider .item{
     height: 735px;
     position: relative
-}
-.about-us-slider .item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 .about-us-slider .dark-layer{
     position: absolute;

@@ -17,7 +17,7 @@
                           <span class="ico-date ico-block">
                             <i class="fa fa-calendar" aria-hidden="true"></i>
                           </span>
-                                <?php the_date(); ?>
+                                <?php the_time(get_option('date_format')); ?>
                             </div>
                             <div class="post-comments pull-right">
                                 <a href="<?php the_permalink(); ?>#comments-blog">

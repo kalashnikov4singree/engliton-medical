@@ -405,7 +405,7 @@ function setPostViews($postID) {
 add_filter('manage_posts_columns', 'posts_column_views');
 add_action('manage_posts_custom_column', 'posts_custom_column_views',5,2);
 function posts_column_views($defaults){
-	$defaults['post_views'] = __('Просмотры');
+	$defaults['post_views'] = __('Views');
 	return $defaults;
 }
 function posts_custom_column_views($column_name, $id){
@@ -438,28 +438,27 @@ function site_pre_get_posts( $query ) {
 function archive_filter_blog(){
 // get years that have posts
 	global $wpdb;
-	$years = $wpdb->get_results( "SELECT YEAR(post_date) AS year FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY year DESC" );
+	$years = $wpdb->get_results( "SELECT YEAR(post_date) AS year FROM wp_posts INNER JOIN wp_term_relationships ON ID = object_id WHERE post_type = 'post' AND post_status = 'publish' AND term_taxonomy_id =  '5'  GROUP BY year DESC" );
 	$post_per_month= $wpdb->get_results( "SELECT YEAR(  `post_date` ) as `year`, MONTH(  `post_date` ) as `month` , COUNT( * ) AS cnt FROM  `wp_posts` INNER JOIN wp_term_relationships ON ID = object_id WHERE post_type =  'post' AND post_status =  'publish' AND term_taxonomy_id =  '5' GROUP BY YEAR(  `post_date` ) , MONTH(  `post_date` )  ORDER BY 1 , 2 ASC LIMIT 0 , 30" );
 	$counts = array();
 	foreach ($post_per_month as $val) {
 		if (!$counts[$val->year]) {
 			$counts[$val->year] = array();
 		}
-			$counts[$val->year][$val->month] = $val->cnt;
+		$counts[$val->year][$val->month] = $val->cnt;
 	}
-	
+
 	foreach ( $years as $year ) {
 		echo '<div class="panel panel-default">';
 		echo '<div class="panel-heading" role="tab" id="heading'. $year->year  .'">';
-		echo '<a role="button" data-toggle="collapse" data-parent="#accordion-blog" href="#'. $year->year  .'" aria-expanded="true" aria-controls="heading'. $year->year  .'">'. $year->year. '</a>' ;
+		echo '<a role="button" class ="collapsed accordion-year" data-toggle="collapse" data-parent="#accordion-blog" href="#'. $year->year  .'" aria-expanded="true" aria-controls="heading'. $year->year  .'"> <b>'. $year->year. '</b></a>' ;
 		echo '</div>';
 		echo '<div id="'. $year->year .'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading'. $year->year .'">';
 		echo '<div class="panel-body">';
-		$months= $wpdb->get_results( "SELECT MONTHNAME(post_date) AS month, MONTH(post_date) AS mnth FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' AND YEAR(post_date) = '" . $year->year . "' GROUP BY month ASC" );
+		$months= $wpdb->get_results( "SELECT MONTHNAME(post_date) AS month, MONTH(post_date) AS mnth FROM wp_posts INNER JOIN wp_term_relationships ON ID = object_id WHERE post_type = 'post' AND post_status = 'publish' AND YEAR(post_date) = '" . $year->year . "' AND term_taxonomy_id =  '5' GROUP BY month ASC" );
 		foreach ($months as $month){
 			/** WP Query Arguments */
 			$posts_this_month = $wpdb->get_results( "SELECT post_title, post_name FROM wp_posts INNER JOIN wp_term_relationships ON ID = object_id WHERE post_type = 'post' AND post_status = 'publish' AND YEAR(post_date) = '" . $year->year . "' AND  MONTHNAME(post_date)  = '" . $month->month . "' AND term_taxonomy_id = '5' " );
-			//var_dump($key);
 			echo '<a class="month-link" data-toggle="collapse" href="#'.$year->year.''. $month->month .'" aria-expanded="false" aria-controls="'.$year->year.''. $month->month .'">' . $month->month .'<span class="count-month">('. $counts[$year->year][$month->mnth].')</span></a>';
 			echo '<div class="collapse" id="'.$year->year.''. $month->month .'">';
 			echo '<div class="body-month">';

@@ -29,7 +29,8 @@
 								<li><a href="/about-us">ABOUT US</a></li>
 								<li><a href="/our-team">OUR TEAM</a></li>
 								<li><a href="/services">SERVICES</a></li>
-								<li><a href="/cdl-clearance">CDL CLEARANCE</a></li>
+								<li><a href="/cdl">CDL</a></li>
+								<li><a href="/clearance">CLEARANCE</a></li>
 								<li><a href="/blog">BLOG</a></li>
 								<li><a href="/contact-us">CONTACT US</a></li>
 							</ul>
@@ -65,6 +66,33 @@
 <script src="<?php echo get_template_directory_uri(); ?>/assets/includes/owl.carousel/owl.carousel.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/spike-nails.js"></script>
 <?php wp_footer(); ?>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+	(function (d, w, c) {
+		(w[c] = w[c] || []).push(function() {
+			try {
+				w.yaCounter38978050 = new Ya.Metrika({
+					id:38978050,
+					clickmap:true,
+					trackLinks:true,
+					accurateTrackBounce:true
+				});
+			} catch(e) { }
+		});
 
+		var n = d.getElementsByTagName("script")[0],
+			s = d.createElement("script"),
+			f = function () { n.parentNode.insertBefore(s, n); };
+		s.type = "text/javascript";
+		s.async = true;
+		s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+		if (w.opera == "[object Opera]") {
+			d.addEventListener("DOMContentLoaded", f, false);
+		} else { f(); }
+	})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/38978050" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 </html>
