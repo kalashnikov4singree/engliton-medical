@@ -19,6 +19,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 	<!--[endif]-->
 	<?php wp_head(); ?>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/phone-replace.js"></script>
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -136,4 +137,32 @@
 		<?php endif;?>
 	<?php } ?>
 
-
+	<?php if ( is_single() ) {?>
+	<?php
+	$imagePost = get_field('bg-image-services');
+	if( !empty($imagePost) ) { ?>
+		<div class="background-section" style="height: 735px; background: url('<?php echo $imagePost['url']; ?>') center no-repeat; background-size: cover">
+			<div class="content-page">
+				<div class="middle-block single-page text-center">
+					<p class="before-slogan">
+						
+					</p>
+					<h1 class="slogan">
+						<?php echo get_the_title();?>
+					</h1>
+				</div>
+			</div>
+		</div>
+	<?php }else{?>
+		<div class="background-section" style="height: 735px; background: url('<?php echo get_template_directory_uri(); ?>/assets/img/Meaningful-Use-1.jpg') center no-repeat; background-size: cover">
+			<div class="content-page">
+				<div class="middle-block single-page text-center">
+					<h1 class="slogan">
+						<?php echo"No";?>
+						<?php echo get_the_title();?>
+					</h1>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+	<?php } ?>

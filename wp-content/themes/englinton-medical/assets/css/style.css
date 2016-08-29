@@ -60,6 +60,10 @@ body{
     margin-bottom: 530px;
     height: 100%;
 }
+h1{
+    margin-top:0;
+    margin-bottom:0;
+}
 .accordion-year:after{
     /* symbol for "opening" panels */
     font: normal normal normal 22px/1 FontAwesome;/* essential for enabling glyphicon */

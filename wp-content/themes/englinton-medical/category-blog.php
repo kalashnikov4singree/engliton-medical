@@ -25,6 +25,7 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/phone-replace.js"></script>
     <!--[endif]-->
     <?php wp_head(); ?>
     <script>
