@@ -45,7 +45,7 @@
 								<div class="address-block">
 									95-25 Jamaica Ave
 									Woodhaven, NY 11421 <br>
-									<a class="phone_container" href="tel:(877) 557-4145" onclick="ga ('send', 'event', 'calls', 'click_on_button_in_footer'); yaCounter38978050.reachGoal ('click_on_button_in_footer');">
+									<a class="phone_container" href="tel:(877) 557-4145" onclick="ga ('send', 'event', 'calls', 'click_on_button_in_footer'); yaCounter38978050.reachGoal ('click_on_button_in_footer'); return true;">
 										(877) 557-4145
 									</a>
 								</div>
