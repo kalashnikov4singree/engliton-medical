@@ -56,7 +56,7 @@ function change() {
 			for (i = 0; i < x.length; i++) {
 				x[i].textContent = phone;
 				if (x[i].getAttribute('href')) {
-					x[i].setAttribute('href', 'tel:' + phone);
+					x[i].setAttribute('href', 'tel:' +18775574145);
 				}
 			}
 		}

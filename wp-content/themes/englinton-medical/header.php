@@ -158,7 +158,6 @@
 			<div class="content-page">
 				<div class="middle-block single-page text-center">
 					<h1 class="slogan">
-						<?php echo"No";?>
 						<?php echo get_the_title();?>
 					</h1>
 				</div>
