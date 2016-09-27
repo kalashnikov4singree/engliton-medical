@@ -12,19 +12,21 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="social-btn">
-                                        <a target="_blank" href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=<?php echo the_permalink();?>&amp;p[title]=<?php echo the_title(); ?>">
+                                        <a class="facebook" target="_blank" href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=<?php echo the_permalink();?>&amp;p[title]=<?php echo the_title(); ?>">
                                             <i class="fa fa-facebook-square" aria-hidden="true"></i>
                                         </a>
-                                        <a target="_blank" href="https://plus.google.com/share?url=<?php echo the_permalink();?>">
+                                        <a class="google-plus" target="_blank" href="https://plus.google.com/share?url=<?php echo the_permalink();?>">
                                             <i class="fa fa-google-plus-square" aria-hidden="true"></i>
                                         </a>
-                                        <a target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo the_permalink();?>&amp;text=<?php echo the_title(); ?>">
+                                        <a class="twitter" target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo the_permalink();?>&amp;text=<?php echo the_title(); ?>">
                                             <i class="fa fa-twitter-square" aria-hidden="true"></i>
                                         </a>
-                                        <a target="_blank" href="https://www.linkedin.com/cws/share?url=<?php echo the_permalink();?>">
+                                        <a class="linkedin" target="_blank" href="https://www.linkedin.com/cws/share?url=<?php echo the_permalink();?>">
                                             <i class="fa fa-linkedin-square" aria-hidden="true"></i>
                                         </a>
-                                        <a target="_blank" href="http://www.tumblr.com/share?v=3&u=<?php echo the_permalink();?>"><i class="fa fa-tumblr-square" aria-hidden="true"></i></a>
+                                        <a class="tumbrl" target="_blank" href="http://www.tumblr.com/share?v=3&u=<?php echo the_permalink();?>">
+                                            <i class="fa fa-tumblr-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 text-right">
@@ -52,19 +54,21 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="social-btn">
-                                        <a target="_blank" href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=<?php echo the_permalink();?>&amp;p[title]=<?php echo the_title(); ?>">
+                                        <a class="facebook" target="_blank" href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=<?php echo the_permalink();?>&amp;p[title]=<?php echo the_title(); ?>">
                                             <i class="fa fa-facebook-square" aria-hidden="true"></i>
                                         </a>
-                                        <a target="_blank" href="https://plus.google.com/share?url=<?php echo the_permalink();?>">
+                                        <a class="google-plus" target="_blank" href="https://plus.google.com/share?url=<?php echo the_permalink();?>">
                                             <i class="fa fa-google-plus-square" aria-hidden="true"></i>
                                         </a>
-                                        <a target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo the_permalink();?>&amp;text=<?php echo the_title(); ?>">
+                                        <a class="twitter" target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo the_permalink();?>&amp;text=<?php echo the_title(); ?>">
                                             <i class="fa fa-twitter-square" aria-hidden="true"></i>
                                         </a>
-                                        <a target="_blank" href="https://www.linkedin.com/cws/share?url=<?php echo the_permalink();?>">
+                                        <a class="linkedin" target="_blank" href="https://www.linkedin.com/cws/share?url=<?php echo the_permalink();?>">
                                             <i class="fa fa-linkedin-square" aria-hidden="true"></i>
                                         </a>
-                                        <a target="_blank" href="http://www.tumblr.com/share?v=3&u=<?php echo the_permalink();?>"><i class="fa fa-tumblr-square" aria-hidden="true"></i></a>
+                                        <a class="tumbrl" target="_blank" href="http://www.tumblr.com/share?v=3&u=<?php echo the_permalink();?>">
+                                            <i class="fa fa-tumblr-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 text-right">

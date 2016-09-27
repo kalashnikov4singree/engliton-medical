@@ -90,7 +90,7 @@
                         <div class="row flex-row">
                             <?php
                             $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-                            query_posts('cat=5&posts_per_page=3&paged='.$paged);
+                            query_posts('cat=5&posts_per_page=12&paged='.$paged);
                             if ( have_posts() ) :  while ( have_posts() )  : the_post(); ?>
                                 <div class="col-sm-12 col-md-6">
                                     <div class="blog-item">

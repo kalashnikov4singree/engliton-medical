@@ -461,11 +461,11 @@ function archive_filter_blog(){
 			$posts_this_month = $wpdb->get_results( "SELECT post_title, post_name FROM wp_posts INNER JOIN wp_term_relationships ON ID = object_id WHERE post_type = 'post' AND post_status = 'publish' AND YEAR(post_date) = '" . $year->year . "' AND  MONTHNAME(post_date)  = '" . $month->month . "' AND term_taxonomy_id = '5' " );
 			echo '<a class="month-link" data-toggle="collapse" href="#'.$year->year.''. $month->month .'" aria-expanded="false" aria-controls="'.$year->year.''. $month->month .'">' . $month->month .'<span class="count-month">('. $counts[$year->year][$month->mnth].')</span></a>';
 			echo '<div class="collapse" id="'.$year->year.''. $month->month .'">';
-			echo '<div class="body-month">';
+			echo '<div class="body-month"><ul>';
 			foreach ( $posts_this_month as $post ) {
-				echo '<a href="'.$post->post_name.'">'.$post->post_title .'</a>';
+				echo '<li><a href="'.$post->post_name.'">'.$post->post_title .'</a></li>';
 			}
-			echo'</div>';
+			echo'</ul></div>';
 			echo'</div>';
 		}
 		echo '</div>';

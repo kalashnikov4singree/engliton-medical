@@ -9,6 +9,17 @@ function tagsHide(){
         })
     }
 }
+function stickyHeader(){
+    $(window).scroll(function(){
+        var sticky = $('.navbar-custom'),
+            scroll = $(window).scrollTop();
+        if (scroll >= 20) {
+            sticky.addClass('fixed');
+        } else {
+            sticky.removeClass('fixed');
+        }
+    });
+}
 $('.about-us-slider').owlCarousel({
     items:1,
     loop:true,
@@ -66,4 +77,5 @@ $(document).ready(function () {
         }
     });
     tagsHide();
+    stickyHeader();
 });

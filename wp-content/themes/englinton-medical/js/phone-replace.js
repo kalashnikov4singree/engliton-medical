@@ -5,7 +5,7 @@ function change() {
 	};
 
 	var phones = {
-		cpc : '(877) 277-8886',
+		cpc : '877-277-8886',
 		search : '(877) 558-5951'
 	};
 

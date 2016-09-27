@@ -33,8 +33,12 @@
 <body <?php body_class(); ?>>
 <header>
 	<div class="header">
-		<nav class="navbar" id="slide-nav">
+		<nav class="navbar navbar-custom" id="slide-nav">
 			<div class="container-fluid">
+				<div class="header-phone-number text-right">
+					<i class="fa fa-phone" aria-hidden="true"></i>
+					<a href="tel:877-557-4145" class="phone_container">877-557-4145</a>
+				</div>
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed"></button>
