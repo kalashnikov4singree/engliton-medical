@@ -13,17 +13,53 @@
 <footer>
 	<div class="footer" id="footer-slide">
 		<div class="top-footer"></div>
-		<div class="bottom-footer">
+		<div class="footer-main">
 			<div class="container">
-				<div class="footer-brand text-left">
-					ENGLINTON MEDICAL P.C.
-				</div>
 				<div class="row">
-					<div class="col-sm-6">
-						<div class="menu-footer">
-							<div class="title-footer">
-								Services:
+					<div class="col-xs-12">
+						<div class="footer-brand text-left">
+							ENGLINTON MEDICAL P.C.
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-7">
+						<div class="address-block">
+							95-25 Jamaica Ave
+							Woodhaven, NY 11421 3<br>
+							<a class="phone_container" href="tel:+18775574145" onclick="ga ('send', 'event', 'calls', 'click_on_button_in_footer'); yaCounter38978050.reachGoal ('click_on_button_in_footer'); return true;">
+								(877) 557-4145
+							</a>
+						</div>
+						<div class="work-day">
+							Monday – Thursday: 9AM – 8PM <br/>
+							Friday: 9AM – 4PM <br/>
+							Saturday: Closed <br/>
+							Sunday: Closed <br/>
+						</div>
+						<div class="social-links">
+							<div class="link">
+								<a class="facebook" href="https://www.facebook.com/integretivemedicine/" target="_blank">
+									<i class="fa fa-facebook-square" aria-hidden="true"></i>
+								</a>
 							</div>
+							<div class="link">
+								<a class="twitter" href="https://twitter.com/IntegrativeNY" target="_blank">
+									<i class="fa fa-twitter-square" aria-hidden="true"></i>
+								</a>
+							</div>
+							<div class="link">
+								<a class="google-plus" href="https://plus.google.com/u/1/b/112672131119985965669/112672131119985965669/posts?gmbpt=true&amp;hl=en" target="_blank">
+									<i class="fa fa-google-plus-square" aria-hidden="true"></i>
+								</a>
+							</div>
+							<div class="link">
+								<a class="pinterest" href="https://www.pinterest.com/IntegrativeNY/ " target="_blank">
+									<i class="fa fa-pinterest-square" aria-hidden="true"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-5">
+						<div class="menu-footer pull-left">
 							<ul class="list-unstyled">
 								<li><a href="/">HOME</a></li>
 								<li><a href="/about-us">ABOUT US</a></li>
@@ -35,29 +71,46 @@
 								<li><a href="/contact-us">CONTACT US</a></li>
 							</ul>
 						</div>
-					</div>
-					<div class="col-sm-6">
-						<div class="row">
-							<div class="col-sm-9 col-sm-offset-3 col-md-7 col-sm-offset-5 col-lg-6 col-lg-offset-6 title-footer">
-								Contact Us:
-							</div>
-							<div class="col-sm-9 col-sm-offset-3  col-md-7 col-sm-offset-5 col-lg-6 col-lg-offset-6">
-								<div class="address-block">
-									95-25 Jamaica Ave
-									Woodhaven, NY 11421 3<br>
-									<a class="phone_container" href="tel:+18775574145" onclick="ga ('send', 'event', 'calls', 'click_on_button_in_footer'); yaCounter38978050.reachGoal ('click_on_button_in_footer'); return true;">
-										(877) 557-4145
-									</a>
-								</div>
-								<div class="work-day">
-									Monday – Thursday: 9AM – 8PM <br/>
-									Friday: 9AM – 4PM <br/>
-									Saturday: Closed <br/>
-									Sunday: Closed <br/>
-								</div>
-							</div>
+						<div class="services-footer pull-left">
+							<ul class="list-unstyled">
+								<?php
+								query_posts('cat=2&showposts=999999');
+								while (have_posts()) : the_post();?>
+									<li>
+										<a href="<?php the_permalink();?>">
+											<?php the_title(); ?>
+										</a>
+									</li>
+								<?php endwhile;?>
+							</ul>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-footer">
+			<div class="container">
+				<div class="copyright pull-left">
+					© ENGLINTON MEDICAL P.C. 2016
+				</div>
+				<div class="bottom-links">
+					<ul class="list-unstyled">
+						<li>
+							<a href="#">
+								Terms of Use
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Disclaimer
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Privacy Policy
+							</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
