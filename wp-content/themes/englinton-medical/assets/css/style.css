@@ -388,6 +388,8 @@ h1{
     line-height: 29px;
     font-size: 20px;
     text-align: justify;
+    float: left;
+    width: 100%;
 }
 .about-us-content p{
     margin-bottom: 30px;
@@ -807,6 +809,84 @@ h1{
      font-family: Proximanova-semibold;
      background: #fff;
  }
+ /*-----------Modal Window Services-----------*/
+.service-modal-btn{
+    width: 100%;
+    float: left;
+    margin-top: 100px;
+}
+.service-modal-btn .btn-englinton{
+    background-color: #00bfa5;
+    border: 2px solid #26a69a;
+    border-radius: 50px;
+    box-shadow: -0.8px 0.6px 10px rgba(0, 0, 0, 0.4);
+    font-size: 32px;
+    color: #fff;
+    padding: 39px 26px 31px 24px;
+    font-family: Adobe-Garamond-Pro;
+    line-height:1;
+    outline: none;
+}
+.modal-service{
+    background-color:rgba(0,0,0,0.2);
+    font-family: Adobe-Garamond-Pro;
+}
+.modal-service .modal-dialog{
+    width: 475px;
+    box-shadow: 0 6px 27.6px 2.4px rgba(0, 0, 0, 0.5);
+}
+.modal-service .modal-content{
+    border-radius: 10px;
+}
+.modal-service .modal-header{
+    background-color: #00bfa5;
+    padding-bottom: 45px;
+    border-bottom: 3px solid #029c87;
+    border-radius: 10px 10px 0 0;
+}
+.modal-service .modal-header .close{
+    color: #fff;
+    opacity: 1;
+}
+.modal-service .modal-header .modal-title{
+    margin-top: 50px;
+    font-size: 32px;
+    color: #fff;
+}
+.modal-service .modal-body{
+    padding: 25px 15px;
+}
+.modal-service .modal-body .form-group{
+    margin-bottom: 35px;
+}
+.modal-service .modal-body .form-control{
+    height: 50px;
+    border: 1px solid #999;
+    border-radius: 25px;
+    font-size: 24px;
+    padding: 11px 15px;
+}
+.modal-service .modal-body select.form-control{
+    background: url("../img/services-select.svg") no-repeat 95% center #fff;
+    padding-right: 60px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.modal-service .modal-body .contact-btn{
+    background-color: #00bfa5;
+    border-radius: 30px;
+    font-size: 32px;
+    width: 213px;
+    height: 60px;
+    color: #fff;
+    border: none;
+    margin-bottom: 20px;
+    outline: none;
+}
+ /*-----------Modal Window Services-----------*/
+
 .footer{
     position: absolute;
     width: 100%;
@@ -1109,6 +1189,15 @@ h1{
     }
     .blog-page-content .popular-archive{
         display: none;
+    }
+    .modal-service .modal-dialog{
+        width: auto;
+    }
+    .modal-service .wpcf7 img.ajax-loader{
+        display: none !important;
+    }
+    .service-modal-btn .btn-englinton{
+        font-size: 22px;
     }
     .footer .menu-footer{
         margin-top: 30px;

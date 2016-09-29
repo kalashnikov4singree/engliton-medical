@@ -16,6 +16,12 @@ get_header(); ?>
 				<div class="about-us-content">
 					<?php include 'single-services.php';?>
 				</div>
+				<div class="service-modal-btn text-center">
+					<!-- Button trigger modal -->
+					<button type="button" class="btn-englinton" data-toggle="modal" data-target="#modalService">
+						Request an Appointment
+					</button>
+				</div>
 <?php } elseif (in_category('Blog')){
 		include 'single-blog.php';
 	}

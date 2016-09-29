@@ -116,6 +116,23 @@
 		</div>
 	</div>
 </footer>
+<div class="modal fade modal-service" id="modalService" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/close-modal.png" alt="">
+				</button>
+				<div class="modal-title text-center">
+					Request an Appointment
+				</div>
+			</div>
+			<div class="modal-body">
+				<?php echo do_shortcode('[contact-form-7 id="206" title="Request an Appointment"]'); ?>
+			</div>
+		</div>
+	</div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/includes/bootstrap/js/bootstrap.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/includes/owl.carousel/owl.carousel.min.js"></script>
