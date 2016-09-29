@@ -523,3 +523,5 @@ function kama_reorder_comment_fields( $fields ){
 
 	return $new_fields;
 }
+// Register Custom Navigation Walker
+require_once('wp_bootstrap_navwalker.php');

@@ -9,6 +9,30 @@ function tagsHide(){
         })
     }
 }
+function addClassMenu() {
+    var windowWidth = $(window).width();
+    $('.dropdown').hover(function() {
+        $(this).addClass("open");
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(0);
+    }, function() {
+        $(this).removeClass("open");
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(0);
+    });
+    $(".header-menu ul>.dropdown>a").each(function () {
+        var link = $(this).attr('href');
+        var jsVoid = 'javascript:void(0);';
+        var pageLink = $(this).data('url');
+        if (!pageLink){
+            $(this).data('url',link);
+        }
+        if (windowWidth >= 767){
+            $(this).attr('href', pageLink);
+        }
+        else{
+            $(this).attr('href' , jsVoid);
+        }
+    });
+}
 function stickyHeader(){
     $(window).scroll(function(){
         var sticky = $('.navbar-custom'),
@@ -78,4 +102,8 @@ $(document).ready(function () {
     });
     tagsHide();
     stickyHeader();
+    addClassMenu();
+});
+$(window).resize(function () {
+    addClassMenu();
 });

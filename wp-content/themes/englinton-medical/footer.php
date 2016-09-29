@@ -60,7 +60,13 @@
 					</div>
 					<div class="col-sm-6 col-md-5">
 						<div class="menu-footer pull-left">
-							<ul class="list-unstyled">
+							<?php
+							wp_nav_menu( array(
+								'menu_id' => 'Site Menu',
+								'menu_class'=> 'list-unstyled'
+							) );
+							?>
+							<!--<ul class="list-unstyled">
 								<li><a href="/">HOME</a></li>
 								<li><a href="/about-us">ABOUT US</a></li>
 								<li><a href="/our-team">OUR TEAM</a></li>
@@ -69,7 +75,7 @@
 								<li><a href="/clearance">CLEARANCE</a></li>
 								<li><a href="/blog">BLOG</a></li>
 								<li><a href="/contact-us">CONTACT US</a></li>
-							</ul>
+							</ul>-->
 						</div>
 						<div class="services-footer pull-left">
 							<ul class="list-unstyled">
