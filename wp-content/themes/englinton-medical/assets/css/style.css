@@ -191,7 +191,8 @@ h1{
     color: #000;
     padding: 10px 15px;
 }
-.header .navbar .header-menu .dropdown-menu>li>a:hover{
+.header .navbar .header-menu .dropdown-menu>li>a:hover,
+.header .navbar .header-menu .dropdown-menu>.active>a{
     background: #ccc;
 }
 .header .navbar .header-menu ul>li>a:hover,
@@ -1087,6 +1088,7 @@ h1{
         z-index: 2;
         top: 0;
         margin: 0;
+        overflow-y: auto;
     }
     #slide-nav #slidemenu .navbar-nav {
         min-width: 0;
@@ -1175,6 +1177,9 @@ h1{
         white-space: normal;
         color: #fff;
         line-height: 1.4;
+    }
+    .header .navbar .header-menu .navbar-nav>li:last-child a{
+        padding: 15px;
     }
     .background-section{
         height:370px !important;

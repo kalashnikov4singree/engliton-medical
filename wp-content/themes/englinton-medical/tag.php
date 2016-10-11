@@ -33,8 +33,12 @@
 <body <?php body_class(); ?>>
 <header>
     <div class="header">
-        <nav class="navbar" id="slide-nav">
+        <nav class="navbar navbar-custom" id="slide-nav">
             <div class="container-fluid">
+                <div class="header-phone-number text-right">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <a href="tel:877-557-4145" class="phone_container">877-557-4145</a>
+                </div>
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed"></button>
@@ -46,16 +50,63 @@
                 <div id="slidemenu">
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="header-menu" >
-                        <ul class="nav navbar-nav navbar-right">
+                        <?php
+                        wp_nav_menu( array(
+                                'menu'              => 'Site Menu',
+                                'depth'             => 2,
+                                'menu_class'        => 'nav navbar-nav  navbar-right',
+                                'walker'            => new wp_bootstrap_navwalker())
+                        );
+                        ?>
+                        <!--<ul class="nav navbar-nav navbar-right">
                             <li><a href="/">HOME</a></li>
                             <li><a href="/about-us">ABOUT US</a></li>
                             <li><a href="/our-team">OUR TEAM</a></li>
-                            <li><a href="/services">SERVICES</a></li>
+                            <li class="dropdown">
+                                <a  type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/services">SERVICES</a>
+                                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                    <li>
+                                        <a href="#">
+                                            Internal medicine
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Acupuncture
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Pain Management
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Neurology
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Chiropractic
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Physical Therapy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Physical Medicine and Rehabilitation
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
                             <li><a href="/cdl">CDL</a></li>
                             <li><a href="/clearance">CLEARANCE</a></li>
                             <li><a href="/blog">BLOG</a></li>
                             <li class="contact-us text-center"><a href="/contact-us">CONTACT US</a></li>
-                        </ul>
+                        </ul>-->
                     </div><!-- /.navbar-collapse -->
                 </div>
             </div><!-- /.container-fluid -->

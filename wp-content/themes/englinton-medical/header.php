@@ -128,7 +128,7 @@
 						WE CARE ABOUT YOUR HEALTH!
 					</h1>
 					<p>
-						<a href="https://www.zocdoc.com/practice/arkadiy-shusterman-22635?referrerType=widget" target="_blank">
+						<a href="javascript:void(0)" data-toggle="modal" data-target="#modalService">
 							BOOK ONLINE
 						</a>
 					</p>

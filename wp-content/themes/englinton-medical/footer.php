@@ -26,8 +26,9 @@
 							95-25 Jamaica Ave
 							Woodhaven, NY 11421 3<br>
 							<a class="phone_container" href="tel:+18775574145" onclick="ga ('send', 'event', 'calls', 'click_on_button_in_footer'); yaCounter38978050.reachGoal ('click_on_button_in_footer'); return true;">
-								(877) 557-4145
-							</a>
+								Tel: (877) 557-4145
+							</a><br>
+							Fax: (718)-441-4027
 						</div>
 						<div class="work-day">
 							Monday – Thursday: 9AM – 8PM <br/>
@@ -37,25 +38,25 @@
 						</div>
 						<div class="social-links">
 							<div class="link">
-								<a class="facebook" href="https://www.facebook.com/integretivemedicine/" target="_blank">
+								<a class="facebook" href="https://www.facebook.com/englintonmedical/" target="_blank">
 									<i class="fa fa-facebook-square" aria-hidden="true"></i>
 								</a>
 							</div>
+<!--							<div class="link">-->
+<!--								<a class="twitter" href="https://twitter.com/IntegrativeNY" target="_blank">-->
+<!--									<i class="fa fa-twitter-square" aria-hidden="true"></i>-->
+<!--								</a>-->
+<!--							</div>-->
 							<div class="link">
-								<a class="twitter" href="https://twitter.com/IntegrativeNY" target="_blank">
-									<i class="fa fa-twitter-square" aria-hidden="true"></i>
-								</a>
-							</div>
-							<div class="link">
-								<a class="google-plus" href="https://plus.google.com/u/1/b/112672131119985965669/112672131119985965669/posts?gmbpt=true&amp;hl=en" target="_blank">
+								<a class="google-plus" href="https://plus.google.com/u/0/102977789880346181438" target="_blank">
 									<i class="fa fa-google-plus-square" aria-hidden="true"></i>
 								</a>
 							</div>
-							<div class="link">
-								<a class="pinterest" href="https://www.pinterest.com/IntegrativeNY/ " target="_blank">
-									<i class="fa fa-pinterest-square" aria-hidden="true"></i>
-								</a>
-							</div>
+<!--							<div class="link">-->
+<!--								<a class="pinterest" href="https://www.pinterest.com/IntegrativeNY/ " target="_blank">-->
+<!--									<i class="fa fa-pinterest-square" aria-hidden="true"></i>-->
+<!--								</a>-->
+<!--							</div>-->
 						</div>
 					</div>
 					<div class="col-sm-6 col-md-5">
